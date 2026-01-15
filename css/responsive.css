@@ -1,0 +1,616 @@
+/* ============================================
+RESPONSIVE DESIGN PROFESIONAL
+   ============================================ */
+
+/* ============================================
+MÓVIL (375px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+
+    /* Variables ajustadas para móvil */
+    :root {
+        --spacing-xs: 0.4rem;
+        --spacing-sm: 0.8rem;
+        --spacing-md: 1.25rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+        --spacing-2xl: 4rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* Header móvil */
+    .header {
+        padding: 0.8rem 0;
+    }
+
+    .logo {
+        font-size: 0.5rem;
+    }
+
+    /* Menú toggle visible en móvil */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1002;
+    }
+
+    /* MENÚ LATERAL DERECHO CON BLUR */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(5, 7, 7, 0.95) 0%, rgba(10, 14, 13, 0.98) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        gap: 0;
+        border-left: 2px solid rgba(60, 176, 67, 0.3);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+        padding: 100px 0 var(--spacing-lg);
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* Overlay con blur cuando menú está abierto */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(60, 176, 67, 0.15);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        font-size: 0.6rem;
+        border-radius: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link::before {
+        display: none;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(60, 176, 67, 0.15);
+        padding-left: 2.5rem;
+    }
+
+    /* Hero móvil - layout vertical */
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 180px;
+        height: 180px;
+        border-width: 2px;
+    }
+
+    .hero-title {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .hero-role {
+        font-size: 0.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.45rem;
+        line-height: 2;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Botones móvil */
+    .btn {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 0.5rem;
+        justify-content: center;
+    }
+
+    /* Secciones */
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .section-title {
+        font-size: 0.7rem;
+        padding: 0 0.5rem;
+    }
+
+    .section-title::before,
+    .section-title::after {
+        width: 15px;
+    }
+
+    .section-subtitle {
+        font-size: 0.5rem;
+    }
+
+    /* Grid móvil */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .grid-2,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards móvil */
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    .card-icon-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-icon-container img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .card-title {
+        font-size: 0.6rem;
+    }
+
+    .card-description {
+        font-size: 0.45rem;
+    }
+
+    /* Progress bar móvil */
+    .progress-label {
+        font-size: 0.4rem;
+    }
+
+    .progress-value {
+        font-size: 0.5rem;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    /* Proyectos móvil */
+    .project-image-container {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: var(--spacing-md);
+    }
+
+    .project-title {
+        font-size: 0.6rem;
+    }
+
+    .project-description {
+        font-size: 0.4rem;
+    }
+
+    .project-tags {
+        gap: 0.3rem;
+    }
+
+    .project-tag {
+        font-size: 0.35rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-link {
+        font-size: 0.45rem;
+    }
+
+    /* Contacto móvil */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .contact-info-item {
+        padding: var(--spacing-sm);
+    }
+
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .contact-details h4 {
+        font-size: 0.45rem;
+    }
+
+    .contact-details p {
+        font-size: 0.45rem;
+    }
+
+    /* Formulario móvil */
+    .form-label {
+        font-size: 0.45rem;
+    }
+
+    .form-input {
+        padding: 0.85rem;
+        font-size: 0.5rem;
+    }
+
+    .form-input::placeholder {
+        font-size: 0.4rem;
+    }
+
+    /* Footer móvil */
+    .footer {
+        padding: var(--spacing-lg) 0;
+        margin-top: var(--spacing-xl);
+    }
+
+    .footer-logo {
+        font-size: 0.55rem;
+    }
+
+    .social-links {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 0.45rem;
+    }
+
+    .footer-text {
+        font-size: 0.35rem;
+    }
+
+    .footer-credit {
+        font-size: 0.3rem;
+    }
+
+    /* About móvil */
+    .about-text {
+        font-size: 0.45rem;
+        line-height: 2;
+    }
+
+    /* Tipografía móvil */
+    h1 {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    h2 {
+        font-size: 0.7rem;
+        line-height: 1.6;
+    }
+
+    h3 {
+        font-size: 0.55rem;
+    }
+
+    p {
+        font-size: 0.45rem;
+        line-height: 2;
+    }
+
+    /* Efectos reducidos para mejor rendimiento */
+    :root {
+        --scanline-opacity: 0.01;
+    }
+
+    .hero::before {
+        background-size: 40px 40px;
+    }
+}
+
+/* ============================================
+   TABLET (768px - 1023px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 720px;
+        padding: 0 2rem;
+    }
+
+    /* Header tablet */
+    .nav-menu {
+        gap: var(--spacing-xs);
+    }
+
+    .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.45rem;
+    }
+
+    /* Hero tablet */
+    .hero-content {
+        gap: var(--spacing-lg);
+    }
+
+    .hero-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    .hero-role {
+        font-size: 0.75rem;
+    }
+
+    /* Grid tablet */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Cards tablet */
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    /* Contact tablet */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Project links tablet */
+    .project-links {
+        flex-direction: row;
+    }
+}
+
+/* ============================================
+   DESKTOP (1024px - 1439px)
+   ============================================ */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    /* Grid desktop */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Hero desktop */
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Efectos hover solo en desktop */
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .project-card:hover {
+        transform: translateY(-12px);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+
+    .social-link:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* ============================================
+   PANTALLAS GRANDES (1440px+)
+   ============================================ */
+@media (min-width: 1440px) {
+    :root {
+        --spacing-xl: 6rem;
+        --spacing-2xl: 8rem;
+    }
+
+    .container {
+        max-width: 1300px;
+    }
+
+    .hero-image {
+        width: 320px;
+        height: 320px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-role {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.65rem;
+    }
+
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .card {
+        padding: var(--spacing-lg);
+    }
+
+    .card-icon-container {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* ============================================
+   PREFERENCIAS DE USUARIO
+   ============================================ */
+
+/* Reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .hero-image {
+        animation: none;
+    }
+
+    .role-text {
+        animation: none;
+        border-color: var(--color-secondary);
+    }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --color-text: #00ff00;
+        --color-text-bright: #00ff00;
+        --color-primary: #00ff00;
+        --color-secondary: #00ff00;
+    }
+
+    .card,
+    .btn,
+    .nav-link {
+        border-width: 2px;
+    }
+}
+
+/* ============================================
+   UTILIDADES RESPONSIVE
+   ============================================ */
+
+/* Ocultar en móvil */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Ocultar en tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 1024px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Flex responsive */
+@media (max-width: 767px) {
+    .flex-mobile-col {
+        flex-direction: column !important;
+    }
+}
+
+/* Text alignment responsive */
+@media (max-width: 767px) {
+    .text-mobile-center {
+        text-align: center !important;
+    }
+}

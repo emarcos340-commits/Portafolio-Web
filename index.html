@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio retro 8-bit de desarrollador frontend con estética cyberpunk">
+    <meta name="keywords" content="desarrollador, frontend, portafolio, retro, 8-bit, cyberpunk">
+    <meta name="author" content="Marcos Emmanuel Martinez Alvarado">
+    <title>DEV_MODE // Portafolio Retro</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/retro.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Overlay para menú móvil -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                &lt;DEV_MODE/&gt;
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">INICIO</a></li>
+                <li><a href="proyectos.html" class="nav-link">PROYECTOS</a></li>
+                <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Layout Horizontal -->
+    <section class="hero">
+        <div class="hero-content container">
+            <!-- Texto a la izquierda -->
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    ¡HOLA,SOY<br>Marcos<br>Martinez!
+                </h1>
+
+                <div class="hero-role">
+                    <span class="role-text" id="roleText">DESARROLLADOR FRONTEND</span>
+                </div>
+
+                <p class="hero-subtitle">
+                    &gt; Creando experiencias digitales únicas
+                </p>
+
+                <p class="hero-description">
+                    Especializado en HTML, CSS y JavaScript con pasión por el diseño retro
+                    y las interfaces modernas. Transformo ideas en código elegante.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="proyectos.html" class="btn btn-primary">
+                        → Ver Proyectos
+                    </a>
+                    <a href="contacto.html" class="btn btn-secondary">
+                        ✉ Contactar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagen a la derecha -->
+            <div class="hero-image-container">
+                <img src="assets/images/yo1.png" alt="Perfil del desarrollador" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SOBRE MI</h2>
+                <p class="section-subtitle">&gt; Conoce mi historia</p>
+            </div>
+
+            <div class="about-content">
+                <p class="about-text mb-md">
+                    ¡Hola! Soy un desarrollador apasionado por crear interfaces web
+                    únicas que combinan la nostalgia retro con tecnologías modernas.
+                </p>
+
+                <p class="about-text mb-md">
+                    Mi especialidad es transformar diseños en código limpio y eficiente,
+                    siempre buscando la mejor experiencia de usuario posible.
+                </p>
+
+                <p class="about-text">
+                    Cuando no estoy programando, me gusta explorar nuevas tecnologías,
+                    jugar videojuegos retro y diseñar interfaces con estética cyberpunk.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">HABILIDADES</h2>
+                <p class="section-subtitle">&gt; Mi stack técnico</p>
+            </div>
+
+            <div class="grid">
+                <!-- HTML5 -->
+                <div class="card">
+                    <div class="card-icon-container">
+                        <!-- Espacio para icono de HTML5 -->
+                        <img src="assets/icons/html.png" alt="HTML5" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="card-title">HTML5</h3>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Nivel</span>
+                            <span class="progress-value">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Estructura semántica y accesible para aplicaciones web modernas.
+                    </p>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="card">
+                    <div class="card-icon-container">
+                        <!-- Espacio para icono de CSS3 -->
+                        <img src="assets/icons/css.png" alt="CSS3" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="card-title">CSS3</h3>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Nivel</span>
+                            <span class="progress-value">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Diseños responsive, animaciones y efectos visuales impactantes.
+                    </p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="card">
+                    <div class="card-icon-container">
+                        <!-- Espacio para icono de JavaScript -->
+                        <img src="assets/icons/javascript.png" alt="JavaScript" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="card-title">JAVASCRIPT</h3>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Nivel</span>
+                            <span class="progress-value">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Interactividad dinámica y funcionalidad avanzada para la web.
+                    </p>
+                </div>
+
+                <!-- Responsive Design -->
+                <div class="card">
+                    <div class="card-icon-container">
+                        <!-- Espacio para icono de Responsive -->
+                        <img src="assets/icons/responsive-design.png" alt="Responsive"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="card-title">RESPONSIVE</h3>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Nivel</span>
+                            <span class="progress-value">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Diseños que se adaptan perfectamente a cualquier dispositivo.
+                    </p>
+                </div>
+
+                <!-- UI/UX -->
+                <div class="card">
+                    <div class="card-icon-container">
+                        <!-- Espacio para icono de UI/UX -->
+                        <img src="assets/icons/ui-design.png" alt="UI/UX" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="card-title">UI/UX</h3>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Nivel</span>
+                            <span class="progress-value">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Interfaces intuitivas centradas en la experiencia del usuario.
+                    </p>
+                </div>
+
+                <!-- Git -->
+                <div class="card">
+                    <div class="card-icon-container">
+                        <!-- Espacio para icono de Git -->
+                        <img src="assets/icons/git.png" alt="Git" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="card-title">GIT</h3>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Nivel</span>
+                            <span class="progress-value">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Control de versiones y colaboración en proyectos de desarrollo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="section-title mb-md">¿LISTO PARA COLABORAR?</h2>
+            <p class="mb-lg" style="max-width: 500px; margin: 0 auto var(--spacing-lg);">
+                Siempre estoy abierto a nuevos proyectos y oportunidades de colaboración.
+            </p>
+            <a href="contacto.html" class="btn btn-primary">
+                Contáctame Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">&lt;DEV_MODE/&gt;</p>
+
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/emarcos340-commits?tab=repositories" class="social-link"
+                            aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/marcos-martinez-dev/" class="social-link"
+                            aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LI</a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="Twitter" target="_blank"
+                            rel="noopener noreferrer">TW</a>
+                    </li>
+                    <li>
+                        <a href="mailto:emarcos340@gmail.com" class="social-link" aria-label="Email">EM</a>
+                    </li>
+                </ul>
+
+                <p class="footer-text">
+                    &copy; 2026 DEV_MODE // Todos los derechos reservados
+                </p>
+                <p class="footer-credit">
+                    Diseñado con código y estética retro
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Animación de roles -->
+    <script>
+        const roles = [
+            'DESARROLLADOR FRONTEND',
+            'WEB DEVELOPER',
+            'MOBILE APP DEVELOPER',
+            'AUTOMATION TEST ENGINEER'
+        ];
+
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+
+        function typeRole() {
+            const roleElement = document.getElementById('roleText');
+            if (!roleElement) return;
+
+            const currentRole = roles[currentRoleIndex];
+
+            if (isDeleting) {
+                roleElement.textContent = currentRole.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+
+                if (currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                    setTimeout(typeRole, 500);
+                    return;
+                }
+            } else {
+                roleElement.textContent = currentRole.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+
+                if (currentCharIndex === currentRole.length) {
+                    isDeleting = true;
+                    setTimeout(typeRole, pauseTime);
+                    return;
+                }
+            }
+
+            setTimeout(typeRole, isDeleting ? deletingSpeed : typingSpeed);
+        }
+
+        // Iniciar animación cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(typeRole, 1000);
+        });
+    </script>
+</body>
+
+</html>

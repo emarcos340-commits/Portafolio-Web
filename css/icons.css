@@ -1,0 +1,414 @@
+/* ============================================
+ICONOS ANIMADOS RETRO
+   ============================================ */
+
+/* Iconos con CSS puro - estilo retro 8-bit */
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.icon-animated {
+    animation: icon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 3px var(--color-primary));
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 8px var(--color-secondary));
+    }
+}
+
+/* Icono de código </> */
+.icon-code::before,
+.icon-code::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background: var(--color-primary);
+    top: 50%;
+}
+
+.icon-code::before {
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    box-shadow: 0 6px 0 var(--color-primary);
+}
+
+.icon-code::after {
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+    box-shadow: 0 6px 0 var(--color-primary);
+}
+
+/* Icono de proyecto/carpeta */
+.icon-project {
+    width: 20px;
+    height: 16px;
+    border: 2px solid var(--color-primary);
+    border-top: 6px solid var(--color-primary);
+    position: relative;
+}
+
+.icon-project::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 8px;
+    height: 6px;
+    background: var(--color-primary);
+}
+
+/* Icono de email */
+.icon-email {
+    width: 20px;
+    height: 14px;
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.icon-email::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 6px solid var(--color-primary);
+}
+
+/* Icono de ubicación */
+.icon-location {
+    width: 16px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+.icon-location::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* Icono de GitHub */
+.icon-github {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.icon-github::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 4px;
+    border: 2px solid var(--color-primary);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Icono de LinkedIn */
+.icon-linkedin {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.icon-linkedin::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 3px;
+    height: 8px;
+    background: var(--color-primary);
+}
+
+.icon-linkedin::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 6px;
+    height: 8px;
+    border: 2px solid var(--color-primary);
+    border-bottom: none;
+    border-left: none;
+}
+
+/* Icono de estrella */
+.icon-star {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.icon-star::before {
+    content: '★';
+    position: absolute;
+    font-size: 20px;
+    color: var(--color-primary);
+    line-height: 1;
+    animation: star-twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes star-twinkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+}
+
+/* Icono de rayo/velocidad */
+.icon-bolt {
+    width: 12px;
+    height: 20px;
+    position: relative;
+}
+
+.icon-bolt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 12px solid var(--color-primary);
+    border-bottom: 10px solid transparent;
+}
+
+.icon-bolt::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 12px solid var(--color-primary);
+    border-top: 10px solid transparent;
+}
+
+/* Icono de check/verificado */
+.icon-check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.icon-check::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%) rotate(-45deg);
+    width: 4px;
+    height: 8px;
+    border: 2px solid var(--color-primary);
+    border-top: none;
+    border-left: none;
+}
+
+/* Icono de flecha */
+.icon-arrow {
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+.icon-arrow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 2px;
+    background: var(--color-primary);
+}
+
+.icon-arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid var(--color-primary);
+    border-top: 2px solid var(--color-primary);
+}
+
+/* Animación de rebote para iconos */
+@keyframes icon-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.icon-bounce {
+    animation: icon-bounce 1s ease-in-out infinite;
+}
+
+/* Animación de rotación para iconos */
+@keyframes icon-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-rotate {
+    animation: icon-rotate 3s linear infinite;
+}
+
+/* Animación de parpadeo para iconos */
+@keyframes icon-blink {
+
+    0%,
+    49%,
+    100% {
+        opacity: 1;
+    }
+
+    50%,
+    99% {
+        opacity: 0.3;
+    }
+}
+
+.icon-blink {
+    animation: icon-blink 2s ease-in-out infinite;
+}
+
+/* Contenedor de icono con texto */
+.icon-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icono de menú hamburguesa animado */
+.icon-menu {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--color-primary);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.icon-menu span:nth-child(1) {
+    top: 0;
+}
+
+.icon-menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-menu span:nth-child(3) {
+    bottom: 0;
+}
+
+.icon-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.icon-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.icon-menu.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* Icono de carga/loading */
+.icon-loading {
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--color-primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: icon-rotate 1s linear infinite;
+}
+
+/* Efectos hover para iconos */
+.icon:hover {
+    filter: drop-shadow(0 0 10px var(--color-secondary));
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* Iconos en botones */
+.btn .icon {
+    margin-right: 8px;
+    filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* Iconos en cards */
+.card .icon {
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

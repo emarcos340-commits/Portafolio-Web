@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Desarrollador frontend con estética retro 8-bit">
+    <meta name="keywords" content="contacto, desarrollador, frontend, email">
+    <meta name="author" content="Tu Nombre">
+    <title>Contacto // DEV_MODE</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/retro.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Overlay para menú móvil -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                &lt;DEV_MODE/&gt;
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">INICIO</a></li>
+                <li><a href="proyectos.html" class="nav-link">PROYECTOS</a></li>
+                <li><a href="contacto.html" class="nav-link active">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: var(--spacing-2xl);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">CONTACTO</h2>
+                <p class="section-subtitle">&gt; Iniciando conexión...</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Formulario -->
+                <div class="card">
+                    <h3 class="card-title mb-lg" style="text-align: left;">ENVIAR MENSAJE</h3>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre completo"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                placeholder="Asunto del mensaje" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="form-input"
+                                placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info de contacto -->
+                <div>
+                    <div class="contact-info-item mb-md">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-details">
+                            <h4>EMAIL</h4>
+                            <p>emarcos340@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item mb-md">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>UBICACIÓN</h4>
+                            <p>Monterrey, Nuevo León</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item mb-md">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h4>DISPONIBILIDAD</h4>
+                            <p class="status-online">
+                                <span class="status-dot"></span>
+                                Disponible para proyectos
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h4>REDES</h4>
+                            <p>@devmode en todas partes</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card -->
+                    <div class="card mt-lg">
+                        <h3 class="card-title mb-md" style="text-align: left;">PREGUNTAS FRECUENTES</h3>
+
+                        <div class="mb-md">
+                            <h4 style="font-size: 0.5rem; color: var(--color-secondary); margin-bottom: 0.5rem;">
+                                ¿Cuánto tiempo tarda un proyecto?
+                            </h4>
+                            <p class="card-description" style="margin-bottom: 0; text-align: left;">
+                                Depende del alcance, pero generalmente entre 2-6 semanas.
+                            </p>
+                        </div>
+
+                        <div class="mb-md">
+                            <h4 style="font-size: 0.5rem; color: var(--color-secondary); margin-bottom: 0.5rem;">
+                                ¿Trabajas de forma remota?
+                            </h4>
+                            <p class="card-description" style="margin-bottom: 0; text-align: left;">
+                                Sí, trabajo 100% remoto con clientes de todo el mundo.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size: 0.5rem; color: var(--color-secondary); margin-bottom: 0.5rem;">
+                                ¿Cuál es tu stack principal?
+                            </h4>
+                            <p class="card-description" style="margin-bottom: 0; text-align: left;">
+                                HTML, CSS y JavaScript vanilla para proyectos web.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Descarga CV -->
+                    <div class="card mt-lg" style="text-align: center;">
+                        <h3 class="card-title mb-md">¿MI TRAYECTORIA?</h3>
+                        <p class="card-description">Descarga mi currículum para conocer más sobre mi experiencia.</p>
+                        <br>
+                        <a href="assets/cv.pdf" class="btn btn-secondary" download>
+                            DESCARGAR CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">&lt;DEV_MODE/&gt;</p>
+
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/emarcos340-commits?tab=repositories" class="social-link"
+                            aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/marcos-martinez-dev/" class="social-link"
+                            aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LI</a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="Twitter" target="_blank"
+                            rel="noopener noreferrer">TW</a>
+                    </li>
+                    <li>
+                        <a href="mailto:emarcos340@gmail.com" class="social-link" aria-label="Email">EM</a>
+                    </li>
+                </ul>
+
+                <p class="footer-text">
+                    &copy; 2026 DEV_MODE // Todos los derechos reservados
+                </p>
+                <p class="footer-credit">
+                    Diseñado con código y estética retro
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

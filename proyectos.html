@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos de desarrollo frontend con estética retro 8-bit">
+    <meta name="keywords" content="proyectos, desarrollo, frontend, retro, 8-bit">
+    <meta name="author" content="Tu Nombre">
+    <title>Proyectos // DEV_MODE</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/retro.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Overlay para menú móvil -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                &lt;DEV_MODE/&gt;
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">INICIO</a></li>
+                <li><a href="proyectos.html" class="nav-link active">PROYECTOS</a></li>
+                <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="section" style="padding-top: var(--spacing-2xl);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">MIS PROYECTOS</h2>
+                <p class="section-subtitle">&gt; Portafolio de trabajos seleccionados</p>
+            </div>
+
+            <div class="grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-lg);">
+                <!-- Proyecto: RTX (NUEVO) -->
+                <div class="project-card" style="max-width: 400px; flex: 1 1 350px;">
+                    <div class="project-image-container">
+                        <img src="assets/images/rtx_preview.png" alt="GeForce RTX Project" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GEFORCE RTX EXPERIENCE</h3>
+                        <p class="project-description">
+                            Exploración interactiva de tecnologías Ray Tracing e IA de NVIDIA.
+                            Diseño de alto impacto visual centrado en hardware de última generación.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://emarcos340-commits.github.io/web-c-fundamentos-desarrollo-web/08-proyecto-final/"
+                                class="project-link" target="_blank">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto: FireMont (NUEVO) -->
+                <div class="project-card" style="max-width: 400px; flex: 1 1 350px;">
+                    <div class="project-image-container">
+                        <img src="assets/images/firemont_preview.png" alt="FireMont Project" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FIREMONT</h3>
+                        <p class="project-description">
+                            Plataforma de detección de incendios forestales usando tecnología satelital NASA FIRMS.
+                            Información y respuesta inmediata en tiempo real.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                            <span class="project-tag">ARDUINO</span>
+                            <span class="project-tag">NEON DB</span>
+                            <span class="project-tag">API KEYS</span>
+                            <span class="project-tag">MICROS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://firemont.vercel.app/" class="project-link" target="_blank">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="section-title mb-md">¿TE GUSTA LO QUE VES?</h2>
+            <p class="mb-lg" style="max-width: 500px; margin: 0 auto var(--spacing-lg);">
+                Puedo ayudarte a crear tu próximo proyecto con la misma atención al detalle.
+            </p>
+            <a href="contacto.html" class="btn btn-primary">
+                Empecemos a Trabajar
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">&lt;DEV_MODE/&gt;</p>
+
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/emarcos340-commits?tab=repositories" class="social-link"
+                            aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/marcos-martinez-dev/" class="social-link"
+                            aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LI</a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="Twitter" target="_blank"
+                            rel="noopener noreferrer">TW</a>
+                    </li>
+                    <li>
+                        <a href="mailto:emarcos340@gmail.com" class="social-link" aria-label="Email">EM</a>
+                    </li>
+                </ul>
+
+                <p class="footer-text">
+                    &copy; 2026 DEV_MODE // Todos los derechos reservados
+                </p>
+                <p class="footer-credit">
+                    Diseñado con código y estética retro
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
